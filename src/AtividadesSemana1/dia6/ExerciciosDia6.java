@@ -1,4 +1,4 @@
-package dia6;
+package AtividadesSemana1.dia6;
 
 import java.util.Scanner;
 
