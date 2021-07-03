@@ -1,4 +1,4 @@
-package dia1;
+package AtividadesSemana1.dia1;
 
 public class Main {
 
