@@ -1,4 +1,4 @@
-package dia3;
+package dia4;
 /**
  * Tech Bank Share RH
  * Rafaela Ferreira
@@ -8,7 +8,7 @@ package dia3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ExerciciosDia3 {
+public class ExerciciosDia4 {
 
     public static void main(String[] args) {
         exercicioRepeticao2();

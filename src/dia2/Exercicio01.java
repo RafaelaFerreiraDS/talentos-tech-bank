@@ -1,4 +1,4 @@
-package dia1;
+package dia2;
 /**
  * Tech Bank Java
  * Rafaela Ferreira
@@ -7,7 +7,7 @@ package dia1;
 
 import java.util.Scanner;
 
-public class Exercicio01 {
+public class ExerciciosDia2 {
 
     public static void main(String[] args) {
         exercicio04(); // metodo para execucao do exercicio

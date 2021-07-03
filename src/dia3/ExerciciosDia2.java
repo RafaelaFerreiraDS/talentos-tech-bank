@@ -1,4 +1,4 @@
-package dia2;
+package dia3;
 /*
   Tech bank Share RH
   Rafaela Ferreira
@@ -7,7 +7,7 @@ package dia2;
 
 import java.util.Scanner;
 
-public class ExerciciosDia2 {
+public class ExerciciosDia3 {
 
     public static void validaSystemIn(Scanner entrada) {
         if (!entrada.hasNextInt()) {
