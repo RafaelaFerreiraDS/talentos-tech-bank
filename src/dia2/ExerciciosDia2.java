@@ -99,5 +99,7 @@ public class ExerciciosDia2 {
         System.out.println("Percentual de votos em branco: " + resultadoBranco);
         System.out.println("Percentual de votos nulos: " + resultadoNulo);
         System.out.println("Percentual de votos válidos: " + resultadoValido);
+
+        entrada.close();
     }
 }
