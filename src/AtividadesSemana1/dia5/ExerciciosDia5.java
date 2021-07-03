@@ -1,4 +1,4 @@
-package dia5;
+package AtividadesSemana1.dia5;
 /**
  * Tech Bank Share RH;
  * Rafaela Ferreira;
