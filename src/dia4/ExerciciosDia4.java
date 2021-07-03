@@ -37,11 +37,13 @@ public class ExerciciosDia4 {
         System.out.printf("Maior número digitado: %d \n", num[num.length - 1]);
         System.out.printf("Menor número digitado: %d \n", num[0]);
         System.out.printf("Média = %.2f", soma / num.length);
+
+        entrada.close();
     }
 
     public static void exercicioRepeticao2() {
         /* Exercicio 2
-         *Construa um algoritmo usando uma estrutura de repetição que calcule o fatorial de um número.
+         * Construa um algoritmo usando uma estrutura de repetição que calcule o fatorial de um número.
          */
 
         Scanner entrada = new Scanner(System.in);
@@ -56,5 +58,7 @@ public class ExerciciosDia4 {
         }
 
         System.out.print("Resultado do fatorial: " + aux);
+
+        entrada.close();
     }
 }
