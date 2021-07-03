@@ -1,4 +1,4 @@
-package dia2;
+package AtividadesSemana1.dia2;
 
 public class Main {
     public static void main(String[] args) {
