@@ -169,7 +169,6 @@ public class ExerciciosDia7 {
         System.out.println("Maior número digitado: " + vetor[vetor.length - 1]);
 
         entrada.close();
-
     }
 
     public static void exercicio5() {
