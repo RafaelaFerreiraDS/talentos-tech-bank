@@ -181,58 +181,68 @@ public class ExerciciosDia7 {
 
         Scanner entrada = new Scanner(System.in).useDelimiter("\n");
 
-        System.out.println("jogador 1, escolha a palavra que deverá ser adivinhada: ");
+        System.out.print("Jogador 1, digite seu nome: ");
+        String nome1 = entrada.next();
+
+        System.out.print(nome1 + ", qual palavra deve ser adivinhada? ");
         String palavraParaAdivinharInput = entrada.next();
 
-        System.out.println("Jogador 2, de uma dica sobre a palavra a ser adivinhada: ");
+        System.out.print(nome1 + ", dê uma dica sobre a palavra: ");
         String dicaDaPalavra = entrada.next();
 
-        int tamanhoDaPalavra = palavraParaAdivinharInput.trim().length();
-        int maxChute = 10;
+        palavraParaAdivinharInput = palavraParaAdivinharInput.trim();
 
-        char[] palavraParaAdivinhar = palavraParaAdivinharInput.toCharArray();
+        int qtdChute = 10;
 
-        Boolean[] letrasCertas = new Boolean[palavraParaAdivinhar.length];
+        char palavraParaAdivinhar[] = palavraParaAdivinharInput.toCharArray();
+
         List<Boolean> listaLetrasCertas = new ArrayList<>();
 
         for (char x : palavraParaAdivinhar) {
             listaLetrasCertas.add(false);
         }
 
-        System.out.println("Vez do jogador 2:");
+        System.out.print("Jogador 2, digite seu nome: ");
+        String nome2 = entrada.next();
 
-        while (maxChute > 0 && Arrays.asList(letrasCertas).contains(false)) {
-            System.out.println("jogador 2, chute uma letra");
+        System.out.println("\n" + nome2 + " a dica da palavra é: " + dicaDaPalavra);
+
+        System.out.println(nome2 + ", agora é sua vez...");
+
+        while (qtdChute > 0 && listaLetrasCertas.contains(false)) {
+            System.out.println(nome2 + ", chute uma letra");
             char chute = entrada.next().charAt(0);
 
-            boolean errouChute = true;
-
+            boolean chuteErrado = true;
             for (int i = 0; i < palavraParaAdivinhar.length; i++) {
                 if (chute == palavraParaAdivinhar[i]) {
-                    letrasCertas[i] = true;
-                    errouChute = false;
+                    listaLetrasCertas.set(i, true);
+                    chuteErrado = false;
                 }
             }
 
-            if (errouChute) {
-                maxChute--;
-                System.out.printf("Agora voce só tem %s chutes\n", maxChute);
+            if (chuteErrado) {
+                qtdChute--;
+                if (qtdChute == 0) {
+                    System.out.printf("Faltam %s chute\n", qtdChute);
+                }
+                System.out.printf("Faltam %s chutes\n", qtdChute);
             }
 
             for (int i = 0; i < palavraParaAdivinhar.length; i++) {
                 if (listaLetrasCertas.get(i)) {
-                    System.out.printf(" %s ", palavraParaAdivinhar[i]);
+                    System.out.printf("%s", palavraParaAdivinhar[i]);
                 } else {
-                    System.out.println(" - ");
+                    System.out.print("_");
                 }
-
             }
+            System.out.println("");
         }
 
         if (!listaLetrasCertas.contains(false)) {
-            System.out.println("Jogador 2 ganhou o jogo");
+            System.out.println(nome2 + " ganhou!!!");
         } else {
-            System.out.println("jogador 1 ganhou");
+            System.out.println(nome1+ " ganhou!!!");
         }
         entrada.close();
     }
