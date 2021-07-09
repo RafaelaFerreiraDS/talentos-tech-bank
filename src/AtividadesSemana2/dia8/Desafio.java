@@ -14,7 +14,7 @@ public class Desafio {
          * encontro o número mais próximo de zero. Se ouver valores como 2 e -2,
          * considere o número positivo.
          */
-        int vetor[] = {-4, 6, 9, 23, -5, 1, 65, 5, -15, 89, 4, -18, -1};
+        int vetor[] = {-4, 6, 9, 23, -5, -2, 1, 65, 5, -15, 89, 4, -18, -1};
 
         int numMaisPerto = vetor[0];
 
@@ -26,6 +26,6 @@ public class Desafio {
             }
         }
 
-        System.out.printf("Número mais perto de zero: %d",numMaisPerto);
+        System.out.printf("Número mais perto de zero: %d", numMaisPerto);
     }
 }
