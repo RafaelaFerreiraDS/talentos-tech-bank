@@ -1,4 +1,4 @@
-package AtividadesSemana2.dia12.universidade.exercicio01;
+package AtividadesSemana2.exercicio01;
 
 public class ControleRemoto {
 
