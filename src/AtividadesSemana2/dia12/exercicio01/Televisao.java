@@ -1,4 +1,4 @@
-package AtividadesSemana2.dia12.universidade.Composicao.exercicio01;
+package AtividadesSemana2.dia12.exercicio01;
 
 public class Televisao {
 
