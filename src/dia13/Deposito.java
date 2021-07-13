@@ -10,16 +10,9 @@ public class Deposito {
         this.saldo = saldo;
     }
 
-    public void depositar(){
-        this.setSaldo(getSaldo() + valorDoDeposito);
-    }
-
-    public float getValorDoDeposito() {
-        return valorDoDeposito;
-    }
-
-    public void setValorDoDeposito(float valorDoDeposito) {
-        this.valorDoDeposito = valorDoDeposito;
+    public void depositarValor() {
+        this.setSaldo(getSaldo() + this.valorDoDeposito);
+        System.out.println(getSaldo());
     }
 
     public float getSaldo() {
