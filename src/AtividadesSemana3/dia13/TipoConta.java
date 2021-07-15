@@ -1,4 +1,4 @@
-package dia13;
+package AtividadesSemana3.dia13;
 
 public class TipoConta {
 
