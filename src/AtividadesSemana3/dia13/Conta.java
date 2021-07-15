@@ -9,15 +9,19 @@ public class Conta {
     private float valorParaDepositar;
     private boolean statusContaAberta;
 
-    public Conta(String nome, float saldoInicial, String tipoConta, int numConta, boolean statusContaAberta) {
+    public Conta(String nome, float saldo, String tipoConta, int numConta, float valorParaDepositar, boolean statusContaAberta) {
         this.nome = nome;
-        this.saldo = saldoInicial;
+        this.saldo = saldo;
         this.tipoConta = tipoConta;
         this.numConta = numConta;
+        this.valorParaDepositar = valorParaDepositar;
         this.statusContaAberta = statusContaAberta;
     }
 
     public void listarExtrato() {
+
+
+        System.out.println("Saldo: " + getSaldo());
 
     }
 
@@ -26,7 +30,10 @@ public class Conta {
             if (tipoConta.equals("Conta Corrente")) { // validacao do tipo de conta corrente
                 if (0 < valorSaque && valorSaque <= getSaldo()) { // validação do valor disponivel na conta
                     setSaldo(getSaldo() - valorSaque);
-                } // inserir cheque especial
+                } else if (valorSaque > getSaldo()) { // cheque especial
+                    setSaldo(getSaldo() - valorSaque);
+                    System.out.println("Você entrou no cheque especial. Valor: " + Math.abs(getSaldo()));
+                }
             } else if (tipoConta.equals("Conta Poupança")) { // validacao conta poupanca
                 if (0 < valorSaque && valorSaque <= getSaldo()) {
                     setSaldo(getSaldo() - valorSaque);
