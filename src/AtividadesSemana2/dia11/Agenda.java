@@ -18,25 +18,28 @@ public class Agenda {
     }
 
     public void removerContato(String nome) {
-        Integer index = buscarPessoa(nome);
-
-
+        int index = buscarPessoa(nome);
+        if (index > -1) {
+            contato.remove(index);
+        } else {
+            System.out.println("Contato não consta na lista");
+        }
 
     }
 
-    public Integer buscarPessoa(String nome) {
+    public int buscarPessoa(String nome) {
 
         for (int i = 0; i < contato.size(); i++) {
             if (contato.get(i).getNome().equals(nome)) {
                 return i;
             }
         }
-        return null;
+        return -1;
     }
 
     public void imprimirAgenda() {
 
-        for(Pessoa pessoa : contato){
+        for (Pessoa pessoa : contato) {
             System.out.println(pessoa);
         }
     }
