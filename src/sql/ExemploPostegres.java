@@ -2,15 +2,18 @@ package sql;
 
 import java.sql.*;
 
-public class ExemploSQLite {
+public class ExemploPostegres {
 
     public static void main(String[] args) {
-
+        String urlPostgres = System.getenv("urlPostgres");
+        String usuario = System.getenv("usuario");
+        String senha = System.getenv("senha");
 
         try (
-                Connection conn = DriverManager.getConnection("jdbc:sqlite:C:/Users/rafae/Documents/banco-de-dados/projeto-academia.db");
+                Connection conn = DriverManager.getConnection(urlPostgres, usuario, senha);
                 Statement stmt = conn.createStatement()) {
-            String query = "select * from academia";
+
+            String query = "select 1 as id, 'Rafaela Ferreira' as nome";
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 System.out.println("ID: " + rs.getInt("id"));
